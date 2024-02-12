@@ -133,3 +133,9 @@ dist
 /dashboard/
 /extension/
 /graphics/
+
+# my private
+/db/
+/cfg/
+/assets/
+/.Trash-1000/
