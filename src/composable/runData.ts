@@ -34,6 +34,10 @@ export function useRunData() {
     return runDataArray?.data?.slice(index, index + 3);
   });
 
+  const upnextRun = computed(() => upcomingRuns?.value?.[0]);
+
+  const ondeckRuns = computed(() => upcomingRuns.value?.slice(1));
+
   const upcomingStartIn = computed(() => {
     if (!upcomingRuns.value || !upcomingRuns.value[1]) {
       return [];
@@ -70,6 +74,8 @@ export function useRunData() {
     runDataActiveRun,
     players,
     upcomingRuns,
+    upnextRun,
+    ondeckRuns,
     upcomingStartIn,
     runTitle,
     runCategory,
