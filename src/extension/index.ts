@@ -15,5 +15,7 @@ export = (nodecg: NodeCG.ServerAPI<Configschema>): void => {
    * things to be loaded *after* the NodeCG context is set.
    */
   set(nodecg);
-  require('./example');
+  require('./displaySound');
+  require('./information');
+  require('./startSoon');
 };

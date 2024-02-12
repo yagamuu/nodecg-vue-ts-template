@@ -72,9 +72,25 @@
     },
     "dashboardPanels": [
       {
-        "name": "example",
-        "title": "Example",
-        "file": "example.html"
+        "name": "setupInformation",
+        "title": "Setup Information",
+        "file": "setupInformation.html",
+        "width": 3,
+        "workspace": "Example Settings"
+      },
+      {
+        "name": "displaySound",
+        "title": "Display Sound",
+        "file": "displaySound.html",
+        "width": 3,
+        "workspace": "Example Settings"
+      },
+      {
+        "name": "startSoon",
+        "title": "Start Soon",
+        "file": "startSoon.html",
+        "width": 3,
+        "workspace": "Example Settings"
       }
     ],
     "graphics": [
