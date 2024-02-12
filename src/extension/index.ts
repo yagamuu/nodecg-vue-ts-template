@@ -5,10 +5,11 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('module-alias').addAlias('@nodecg-vue-ts-template', require('path').join(__dirname, '.'));
 
-import type { NodeCG } from 'nodecg-types/types/server';
+import { Configschema } from '@nodecg-vue-ts-template/types/schemas';
+import type NodeCG from '@nodecg/types';
 import { set } from './util/nodecg';
 
-export = (nodecg: NodeCG): void => {
+export = (nodecg: NodeCG.ServerAPI<Configschema>): void => {
   /**
    * Because of how `import`s work, it helps to use `require`s to force
    * things to be loaded *after* the NodeCG context is set.
