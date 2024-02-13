@@ -65,6 +65,8 @@ export function useRunData() {
 
   const runSystem = computed(() => runDataActiveRun?.data?.system ?? '');
 
+  const runRelease = computed(() => runDataActiveRun?.data?.release ?? '');
+
   const estimate = computed(() => {
     const estimateS = runDataActiveRun?.data?.estimateS ?? 0;
     return util.formatSeconds(estimateS);
@@ -80,6 +82,7 @@ export function useRunData() {
     runTitle,
     runCategory,
     runSystem,
+    runRelease,
     estimate,
   }
 }
