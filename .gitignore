@@ -129,13 +129,11 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# Built files
+# NodeCG built files
 /dashboard/
 /extension/
 /graphics/
-
-# my private
+/shared/dist/
 /db/
 /cfg/
 /assets/
-/.Trash-1000/

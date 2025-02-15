@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue';
 import { ref, computed } from 'vue';
-import { SetupInformation } from '@nodecg-vue-ts-template/types/schemas/setupInformation';
+import type { Schemas } from '../../types';
 import InformationCreationForm from './components/InformationCreationForm.vue';
 import InformationModificationForm from './components/InformationModificationForm.vue';
 import InformationList from './components/InformationList.vue';
@@ -10,20 +10,16 @@ import InformationList from './components/InformationList.vue';
 useHead({ title: 'Setup Information' });
 
 const transitionStatus = ref('informations');
-const modificationInformation = ref<SetupInformation | null>(null);
-
+const modificationInformation = ref<Schemas.SetupInformation.SetupInformation | null>(null);
 const isCreation = computed(() => transitionStatus.value === 'creation');
 const isModification = computed(() => transitionStatus.value === 'modification');
-
 const openCreationForm = () => {
   transitionStatus.value = 'creation';
 };
-
-const openModificationForm = (information: SetupInformation) => {
+const openModificationForm = (information: Schemas.SetupInformation.SetupInformation) => {
   modificationInformation.value = information;
   transitionStatus.value = 'modification';
 };
-
 const closeForm = () => {
   transitionStatus.value = 'information';
 };
@@ -35,7 +31,7 @@ const closeForm = () => {
       <information-creation-form v-if="isCreation" @close-creation-form="closeForm"/>
       <information-modification-form
         v-else-if="isModification"
-        :information="modificationInformation as SetupInformation"
+        :information="modificationInformation as Schemas.SetupInformation.SetupInformation"
         @close-creation-form="closeForm"/>
       <div v-else>
         <QBtn

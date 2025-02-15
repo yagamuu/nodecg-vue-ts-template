@@ -1,26 +1,31 @@
-/* eslint-disable max-len */
-
-import type { DisplaySound, SetupInformationArray, StartSoon } from '@nodecg-vue-ts-template/types/schemas';
-import type { RunDataActiveRun } from '@nodecg-vue-ts-template/types/schemas/speedcontrol';
 import type NodeCG from '@nodecg/types';
-import { get as nodecg } from './nodecg';
+import type { Schemas } from '../../types/index.js';
+import { nodecg } from './nodecg.js';
+
+// Wrapper for replicants that have a default (based on schema).
+function hasDefault<T>(name: string, namespace?: string) {
+  if (namespace) {
+    return nodecg.Replicant<T>(name, namespace) as unknown as NodeCG.default.ServerReplicantWithSchemaDefault<T>;
+  }
+  return nodecg.Replicant<T>(name) as unknown as NodeCG.default.ServerReplicantWithSchemaDefault<T>;
+}
+// Wrapper for replicants that don't have a default (based on schema).
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function hasNoDefault<T>(name: string, namespace?: string) {
+  if (namespace) {
+    return nodecg.Replicant<T>(name, namespace) as unknown as NodeCG.default.ServerReplicant<T>;
+  }
+  return nodecg.Replicant<T>(name) as NodeCG.default.ServerReplicant<T>;
+}
 
 /**
- * This is where you can declare all your replicant to import easily into other files,
+ * This is where you can declare all of your replicants to import easily into other files,
  * and to make sure they have any correct settings on startup.
  */
-export const displaySoundReplicant = nodecg().Replicant<DisplaySound>('displaySound', {
-  defaultValue: {
-    playerId: '',
-  },
-}) as unknown as NodeCG.ServerReplicantWithSchemaDefault<DisplaySound>;
+export const exampleReplicant = hasDefault<Schemas.ExampleReplicant>('exampleReplicant');
 
-export const runDataActiveRunReplicant = nodecg().Replicant<RunDataActiveRun>('runDataActiveRun', 'nodecg-speedcontrol') as unknown as NodeCG.ServerReplicantWithSchemaDefault<RunDataActiveRun>;
+export const displaySoundReplicant = hasDefault<Schemas.DisplaySound>('displaySound');
+export const setupInformationArrayReplicant = hasDefault<Schemas.SetupInformation.SetupInformationArray>('setupInformationArray');
+export const startSoonReplicant = hasDefault<Schemas.StartSoon>('startSoon');
 
-export const informationArrayReplicant = nodecg().Replicant<SetupInformationArray>('setupInformationArray', {
-  defaultValue: [],
-});
-
-export const startSoonReplicant = nodecg().Replicant<StartSoon>('startSoon', {
-  defaultValue: false,
-});
+export const runDataActiveRunReplicant = hasDefault<Schemas.Speedcontrol.RunData.RunDataActiveRun>('runDataActiveRun', 'nodecg-speedcontrol');

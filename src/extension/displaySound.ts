@@ -1,6 +1,6 @@
-import { RunDataActiveRun } from '@nodecg-vue-ts-template/types/schemas/speedcontrol/RunData';
-import { get as nodecg } from './util/nodecg';
-import { displaySoundReplicant, runDataActiveRunReplicant } from './util/replicants';
+import { nodecg } from './util/nodecg.js';
+import type { Schemas } from '../types/index.js';
+import { runDataActiveRunReplicant, displaySoundReplicant } from './util/replicants.js';
 
 if (runDataActiveRunReplicant.value?.teams) {
   displaySoundReplicant.value = {
@@ -8,11 +8,11 @@ if (runDataActiveRunReplicant.value?.teams) {
   };
 }
 
-runDataActiveRunReplicant.on('change', (newVal: RunDataActiveRun, oldVal: RunDataActiveRun) => {
+runDataActiveRunReplicant.on('change', (newVal: Schemas.Speedcontrol.RunData.RunDataActiveRun, oldVal: Schemas.Speedcontrol.RunData.RunDataActiveRun) => {
   if (newVal?.teams && oldVal?.id !== newVal.id) {
     displaySoundReplicant.value.playerId = newVal.teams[0].players[0].id;
   }
-  nodecg().log.info('Change Display Sound');
+  nodecg.log.info('Change Display Sound');
 });
 
 const changeDisplaySound = (playerId: string): void => {
@@ -20,10 +20,10 @@ const changeDisplaySound = (playerId: string): void => {
 
   displaySoundReplicant.value.playerId = playerId;
 
-  nodecg().log.info('Change Display Sound');
+  nodecg.log.info('Change Display Sound');
 };
 
-nodecg().listenFor('changeDisplaySound', (data, ack) => {
+nodecg.listenFor('changeDisplaySound', (data, ack) => {
   changeDisplaySound(data.id);
 
   if (ack && !ack.handled) {

@@ -1,4 +1,3 @@
-export * from './RunData';
+export * as RunData from './RunData.d.ts';
 export * from './RunDataActiveRunSurrounding';
-export * from './Timer';
-export * from './Checklist';
+export * as Timer from './Timer';

@@ -1,19 +1,8 @@
 import { computed } from 'vue'
-import { RunDataActiveRun, RunDataActiveRunSurrounding, RunDataArray } from '../types/schemas/speedcontrol';
-import { useReplicant } from 'nodecg-vue-composable';
 import * as util from './util/format';
+import { runDataActiveRun, runDataArray, runDataActiveRunSurrounding } from '../browser_shared/replicants';
 
 export function useRunData() {
-  const runDataActiveRun = useReplicant<RunDataActiveRun>('runDataActiveRun', 'nodecg-speedcontrol');
-  const runDataArray = useReplicant<RunDataArray>(
-    'runDataArray',
-    'nodecg-speedcontrol',
-  );
-  const runDataActiveRunSurrounding = useReplicant<RunDataActiveRunSurrounding>(
-    'runDataActiveRunSurrounding',
-    'nodecg-speedcontrol',
-  );
-
   const players = computed(() => {
     if (!runDataActiveRun?.data) {
       return [];

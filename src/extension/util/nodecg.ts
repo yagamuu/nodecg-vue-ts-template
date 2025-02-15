@@ -1,12 +1,7 @@
-import { Configschema } from '@nodecg-vue-ts-template/types/schemas';
-import type NodeCG from '@nodecg/types';
+import type { NodeCGServerAPI } from '../../types/index.js';
 
-let nodecg: NodeCG.ServerAPI<Configschema>;
+export let nodecg!: NodeCGServerAPI;
 
-export function set(ctx: NodeCG.ServerAPI<Configschema>): void {
+export function set(ctx: NodeCGServerAPI) {
   nodecg = ctx;
-}
-
-export function get(): NodeCG.ServerAPI<Configschema> {
-  return nodecg;
 }
