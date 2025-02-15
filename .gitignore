@@ -134,3 +134,6 @@ dist
 /extension/
 /graphics/
 /shared/dist/
+/db/
+/cfg/
+/assets/
