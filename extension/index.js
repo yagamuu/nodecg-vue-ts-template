@@ -1,17 +1,13 @@
-"use strict";
-/* eslint-disable global-require */
-// This must go first so we can use module aliases!
-/* eslint-disable import/first */
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-require('module-alias').addAlias('@nodecg-vue-ts-template', require('path').join(__dirname, '.'));
-const nodecg_1 = require("./util/nodecg");
-module.exports = (nodecg) => {
+import { set } from './util/nodecg.js';
+export default async (nodecg) => {
     /**
-     * Because of how `import`s work, it helps to use `require`s to force
-     * things to be loaded *after* the NodeCG context is set.
+     * Because of how top-level `import`s work, it helps to use `import`s here
+     * to force things to be loaded *after* the NodeCG context is set.
      */
-    (0, nodecg_1.set)(nodecg);
-    require('./displaySound');
-    require('./information');
-    require('./startSoon');
+    set(nodecg); // set nodecg "context" before anything else
+    await import('./util/replicants.js'); // make sure replicants are set up
+    // await import('./example.js');
+    await import('./displaySound.js');
+    await import('./information.js');
+    await import('./startSoon.js');
 };
