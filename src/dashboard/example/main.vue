@@ -16,7 +16,9 @@ const exampleType: ExampleType = { exampleProperty: 'exampleString' };
   <div>
     {{ text }}
     <br><br>
-    <img src="./image.png">
+    <img src="./image.png" :style="{ width: '100%' }">
+    <br><br>
+    <QBtn color="primary" label="Example" />
     <br><br>
     <!-- Example code: accessing a replicant. -->
     {{ exampleReplicant?.data?.exampleProperty }}

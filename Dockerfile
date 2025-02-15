@@ -1,18 +1,18 @@
-FROM ghcr.io/nodecg/nodecg:latest
+FROM node:22.14-slim
 
-USER root
-WORKDIR /opt/nodecg
+WORKDIR /nodecg
 
-RUN nodecg install yagamuu/nodecg-speedcontrol --dev
+RUN apt-get update && apt-get install -y python3 build-essential git
 
-WORKDIR /opt/nodecg/bundles/nodecg-speedcontrol
-RUN npm run build
+WORKDIR /nodecg/bundles
 
-WORKDIR /opt/nodecg/bundles/nodecg-vue-ts-template
-COPY . /opt/nodecg/bundles/nodecg-vue-ts-template
-RUN npm i
+RUN git clone -b build https://github.com/speedcontrol/nodecg-speedcontrol.git
+WORKDIR /nodecg/bundles/nodecg-speedcontrol
+RUN npm i --omit=dev
 
-WORKDIR /opt/nodecg
+WORKDIR /nodecg
+COPY . .
+RUN npm ci
 
 EXPOSE 9090
 

@@ -1,18 +1,14 @@
 <script setup lang="ts">
-import { useSetupInformation } from '@nodecg-vue-ts-template/composable';
-import { SetupInformation } from '@nodecg-vue-ts-template/types/schemas/setupInformation';
+import { setupInformationArray } from '../../../browser_shared/replicants';
+import type { Schemas } from '../../../types';
 
-// eslint-disable-next-line no-spaced-func
+ 
 defineEmits<{
-  (e: 'openModificationForm', value: SetupInformation): void
+  (e: 'openModificationForm', value: Schemas.SetupInformation.SetupInformation): void
 }>();
-
-const { setupInformationArray } = useSetupInformation();
-
 const deleteInformation = (id: string) => {
   nodecg.sendMessage('deleteInformation', { id });
 };
-
 </script>
 
 <template>

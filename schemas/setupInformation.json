@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "SetupInformation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": ["id", "text"],
+      "additionalProperties": true
+    }
+  },
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/SetupInformation"
+  },
+  "default": []
+}
