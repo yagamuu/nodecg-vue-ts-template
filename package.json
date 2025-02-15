@@ -61,6 +61,27 @@
         "title": "Example",
         "file": "example/main.html",
         "width": 3
+      },
+      {
+        "name": "setupInformation",
+        "title": "Setup Information",
+        "file": "setupInformation/main.html",
+        "width": 3,
+        "workspace": "Example Settings"
+      },
+      {
+        "name": "displaySound",
+        "title": "Display Sound",
+        "file": "displaySound/main.html",
+        "width": 3,
+        "workspace": "Example Settings"
+      },
+      {
+        "name": "startSoon",
+        "title": "Start Soon",
+        "file": "startSoon/main.html",
+        "width": 3,
+        "workspace": "Example Settings"
       }
     ],
     "graphics": [
@@ -70,5 +91,9 @@
         "height": 1080
       }
     ]
+  },
+  "dependencies": {
+    "nodecg": "^2.5.3",
+    "uuid": "^11.0.5"
   }
 }
