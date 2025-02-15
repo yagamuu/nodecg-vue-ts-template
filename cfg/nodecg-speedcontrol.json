@@ -1,0 +1,30 @@
+{
+  "language": "ja",
+  "twitch": {
+    "enabled": true,
+    "clientID": "fa73v06gocssje8940r6duwd3z7tve",
+    "clientSecret": "u00ypowjnpqmgvf7pof7m7edc9khfo",
+    "redirectURI": "http://localhost:9090/nodecg-speedcontrol/twitchauth",
+    "channelName": "yagamuu",
+    "streamTitle": "{{game}} - INDIE Speedrun Summit 2",
+    "streamDefaultGame": "Games + Demos",
+    "ffzIntegration": true,
+    "ffzUseRepeater": false,
+    "metadataUseExternal": false
+  },
+  "schedule": {
+    "defaultURL": "https://horaro.org/mystery-dungeon-rta-fes/mysrtafes5",
+    "ignoreGamesWhileImporting": [
+      "Setup"
+    ],
+    "disableSpeedrunComLookup": false
+  },
+  "customData": {
+    "run": [
+      {
+        "name": "Is challenge game",
+        "key": "isChallenge"
+      }
+    ]
+  }
+}

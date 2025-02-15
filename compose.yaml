@@ -1,0 +1,31 @@
+services:
+  nodecg:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: root
+    command: sh -c "npm ci --omit=dev && npx nodecg start"
+    working_dir: /nodecg
+    init: true
+    ports:
+      - 9090:9090
+    volumes:
+      - nodecg_db:/nodecg/db
+      - nodecg_assets:/nodecg/assets
+      - nodecg_logs:/nodecg/logs
+      - node_modules:/nodecg/node_modules
+      - ./cfg:/nodecg/cfg:ro
+      - ./package.json:/nodecg/package.json:ro
+      - ./package-lock.json:/nodecg/package-lock.json
+      - ./dashboard:/nodecg/dashboard:ro
+      - ./extension:/nodecg/extension:ro
+      - ./graphics:/nodecg/graphics:ro
+      - ./schemas:/nodecg/schemas:ro
+      - ./src:/nodecg/src:ro
+      - ./shared:/nodecg/shared:ro
+
+volumes:
+  nodecg_db:
+  nodecg_assets:
+  nodecg_logs:
+  node_modules:

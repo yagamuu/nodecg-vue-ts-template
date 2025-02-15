@@ -5,4 +5,8 @@
  */
 
 export type { Configschema } from './schemas/configschema.d.ts';
+export type { DisplaySound } from './schemas/displaySound.d.ts';
+export type { StartSoon } from './schemas/startSoon.d.ts';
+export type * as SetupInformation from './schemas/setupInformation.d.ts';
+export type * as Speedcontrol from './schemas/speedcontrol/index.d.ts';
 export type { ExampleReplicant } from './schemas/exampleReplicant.d.ts';

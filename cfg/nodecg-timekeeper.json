@@ -1,0 +1,6 @@
+{
+  "countdown": {
+    "enabled": true,
+    "offsetSeconds": 10
+  }
+}
