@@ -1,17 +1,21 @@
 {
-  "_QBtn-BY1trCjQ.js": {
-    "file": "assets/QBtn-BY1trCjQ.js",
+  "_QBtn-DoCIVpon.js": {
+    "file": "assets/QBtn-DoCIVpon.js",
     "name": "QBtn",
     "imports": [
-      "_replicants-DWNqWo78.js",
-      "_QIcon-DA0v0v6P.js"
+      "_replicants-ZqOUMdep.js",
+      "_QIcon-UKijo9Ij.js"
     ]
   },
-  "_QIcon-DA0v0v6P.js": {
-    "file": "assets/QIcon-DA0v0v6P.js",
+  "_QIcon-OdC9AWB0.css": {
+    "file": "assets/QIcon-OdC9AWB0.css",
+    "src": "_QIcon-OdC9AWB0.css"
+  },
+  "_QIcon-UKijo9Ij.js": {
+    "file": "assets/QIcon-UKijo9Ij.js",
     "name": "QIcon",
     "imports": [
-      "_replicants-DWNqWo78.js"
+      "_replicants-ZqOUMdep.js"
     ],
     "css": [
       "assets/QIcon-OdC9AWB0.css"
@@ -27,26 +31,22 @@
       "assets/KFOlCnqEu92Fr1MmYUtfBBc--Dr8fnyGc.woff"
     ]
   },
-  "_QIcon-OdC9AWB0.css": {
-    "file": "assets/QIcon-OdC9AWB0.css",
-    "src": "_QIcon-OdC9AWB0.css"
-  },
-  "_option-sizes-5b1eTtLk.js": {
-    "file": "assets/option-sizes-5b1eTtLk.js",
+  "_option-sizes-T5QsZBXZ.js": {
+    "file": "assets/option-sizes-T5QsZBXZ.js",
     "name": "option-sizes",
     "imports": [
-      "_replicants-DWNqWo78.js"
+      "_replicants-ZqOUMdep.js"
     ]
   },
-  "_private.use-form-itkItP2L.js": {
-    "file": "assets/private.use-form-itkItP2L.js",
+  "_private.use-form-DIN0yNSO.js": {
+    "file": "assets/private.use-form-DIN0yNSO.js",
     "name": "private.use-form",
     "imports": [
-      "_replicants-DWNqWo78.js"
+      "_replicants-ZqOUMdep.js"
     ]
   },
-  "_replicants-DWNqWo78.js": {
-    "file": "assets/replicants-DWNqWo78.js",
+  "_replicants-ZqOUMdep.js": {
+    "file": "assets/replicants-ZqOUMdep.js",
     "name": "replicants"
   },
   "node_modules/@quasar/extras/material-icons/web-font/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.woff": {
@@ -82,59 +82,59 @@
     "src": "node_modules/@quasar/extras/roboto-font/web-font/KFOmCnqEu92Fr1Mu4mxM.woff"
   },
   "src/dashboard/displaySound/main.ts": {
-    "file": "assets/main-tevETzqM.js",
+    "file": "assets/main-B7sHwD4c.js",
     "name": "main",
     "src": "src/dashboard/displaySound/main.ts",
     "isEntry": true,
     "imports": [
-      "_QIcon-DA0v0v6P.js",
-      "_replicants-DWNqWo78.js",
-      "_private.use-form-itkItP2L.js",
-      "_option-sizes-5b1eTtLk.js"
+      "_QIcon-UKijo9Ij.js",
+      "_replicants-ZqOUMdep.js",
+      "_private.use-form-DIN0yNSO.js",
+      "_option-sizes-T5QsZBXZ.js"
     ]
   },
   "src/dashboard/example/main.ts": {
-    "file": "assets/main-B-tBEtNl.js",
+    "file": "assets/main-PvvAltB4.js",
     "name": "main",
     "src": "src/dashboard/example/main.ts",
     "isEntry": true,
     "imports": [
-      "_QIcon-DA0v0v6P.js",
-      "_replicants-DWNqWo78.js",
-      "_QBtn-BY1trCjQ.js"
+      "_QIcon-UKijo9Ij.js",
+      "_replicants-ZqOUMdep.js",
+      "_QBtn-DoCIVpon.js"
     ]
   },
   "src/dashboard/setupInformation/main.ts": {
-    "file": "assets/main-ByIkI0Gf.js",
+    "file": "assets/main-B-jLBzdG.js",
     "name": "main",
     "src": "src/dashboard/setupInformation/main.ts",
     "isEntry": true,
     "imports": [
-      "_QIcon-DA0v0v6P.js",
-      "_replicants-DWNqWo78.js",
-      "_QBtn-BY1trCjQ.js",
-      "_private.use-form-itkItP2L.js"
+      "_QIcon-UKijo9Ij.js",
+      "_replicants-ZqOUMdep.js",
+      "_QBtn-DoCIVpon.js",
+      "_private.use-form-DIN0yNSO.js"
     ]
   },
   "src/dashboard/startSoon/main.ts": {
-    "file": "assets/main-BDQP5PRI.js",
+    "file": "assets/main-DcWlL1v2.js",
     "name": "main",
     "src": "src/dashboard/startSoon/main.ts",
     "isEntry": true,
     "imports": [
-      "_QIcon-DA0v0v6P.js",
-      "_replicants-DWNqWo78.js",
-      "_private.use-form-itkItP2L.js",
-      "_option-sizes-5b1eTtLk.js"
+      "_QIcon-UKijo9Ij.js",
+      "_replicants-ZqOUMdep.js",
+      "_private.use-form-DIN0yNSO.js",
+      "_option-sizes-T5QsZBXZ.js"
     ]
   },
   "src/graphics/example/main.ts": {
-    "file": "assets/main-DvaIiL-h.js",
+    "file": "assets/main-RJnwgQDf.js",
     "name": "main",
     "src": "src/graphics/example/main.ts",
     "isEntry": true,
     "imports": [
-      "_replicants-DWNqWo78.js"
+      "_replicants-ZqOUMdep.js"
     ]
   }
 }

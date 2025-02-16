@@ -1,0 +1,1 @@
+import{i as r,j as u}from"./replicants-ZqOUMdep.js";const o={dark:{type:Boolean,default:null}};function c(a,n){return r(()=>a.dark===null?n.dark.isActive:a.dark)}const i={name:String};function d(a={}){return(n,e,t)=>{n[e](u("input",{class:"hidden"+(t||""),...a.value}))}}function m(a){return r(()=>a.name||a.for)}export{i as a,c as b,d as c,m as d,o as u};
