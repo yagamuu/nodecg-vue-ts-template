@@ -54,7 +54,10 @@
     }
   },
   "nodecg": {
-    "compatibleRange": "^2.3.0",
+    "compatibleRange": "^2.5.0",
+    "bundleDependencies": {
+      "nodecg-speedcontrol": "^2.5.0"
+    },
     "dashboardPanels": [
       {
         "name": "example",
