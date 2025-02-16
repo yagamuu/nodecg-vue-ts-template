@@ -32,7 +32,7 @@ export function useRunData() {
       return [];
     }
 
-    const startInArray = [0];
+    const startInArray = [] as number[];
     const secondRunStartIn = (upcomingRuns.value[0].estimateS || 0)
       + (upcomingRuns.value[1].setupTimeS || 0);
     startInArray.push(secondRunStartIn);
@@ -61,6 +61,8 @@ export function useRunData() {
     return util.formatSeconds(estimateS);
   });
 
+  const estimateS = computed(() => runDataActiveRun?.data?.estimateS ?? 0);
+
   return {
     runDataActiveRun,
     players,
@@ -73,5 +75,6 @@ export function useRunData() {
     runSystem,
     runRelease,
     estimate,
+    estimateS,
   }
 }

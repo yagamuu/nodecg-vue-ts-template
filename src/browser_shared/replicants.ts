@@ -1,4 +1,4 @@
-import { useReplicant } from 'nodecg-vue-composable';
+import { useReplicant, useAssetReplicant } from 'nodecg-vue-composable';
 import type { Schemas } from '../types';
 
 // YOU MUST CHANGE THIS TO YOUR BUNDLE'S NAME!
@@ -14,6 +14,7 @@ export const exampleReplicant = useReplicant<Schemas.ExampleReplicant>('exampleR
 export const displaySound = useReplicant<Schemas.DisplaySound>('displaySound', thisBundle);
 export const setupInformationArray = useReplicant<Schemas.SetupInformation.SetupInformationArray>('setupInformationArray', thisBundle);
 export const startSoon = useReplicant<Schemas.StartSoon>('startSoon', thisBundle);
+export const layoutBg = useAssetReplicant('layoutBg', thisBundle);
 
 // ---
 // Speedcontrol replicants
