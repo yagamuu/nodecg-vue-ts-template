@@ -12,6 +12,7 @@ export default tseslint.config([
       'extension/**/*',
       'graphics/**/*',
       'shared/dist/**/*',
+      'bundles/**/*',
     ],
   },
   browser,
